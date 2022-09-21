@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(()=>{
+        //     console.log('张三买菜回来了');
+        // },Math.random()*1000)
+        // setTimeout(()=>{
+        //     console.log('李四买菜回来了');
+        // },Math.random()*1000)
+        // setTimeout(()=>{
+        //     console.log('王武去买酒回来了');
+        // },Math.random()*1000)
+
+        // console.log('干饭');
+
+        setTimeout(()=>{
+            console.log('张三买菜回来了');
+                setTimeout(()=>{
+                console.log('李四买菜回来了');
+                setTimeout(()=>{
+                    console.log('王武去买酒回来了');
+                    console.log('干饭');
+
+                },Math.random()*1000)
+
+            },Math.random()*1000)
+        },Math.random()*1000)
+       
+        
+    </script>
+</body>
+</html>
