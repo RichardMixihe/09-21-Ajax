@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //请求题有三种格式
+    // 1.FormData对象
+    // 2.字面量对象----JSON
+    // 3.查询字符串
+
+    function abc(data) {
+        // 判断data是那种格式的请求体
+        // console.log(typeof data);
+        //instanceof，判断对象的原型链上是否出现过构造函数
+         if( data instanceof FormData){
+            //说明data时ForData对象
+            console.log('formdata');
+         }else if(typeof data === 'object'){
+            //  说明是普通的字面量对象
+            console.log('字面量对象');
+         }else if(typeof data == 'string'){
+            // 说明data时查询字符串
+            console.log('字符串');
+         }else{
+            //说明没有data
+            console.log('没有传递data');
+
+         }
+    }
+
+    abc(new FormData())
+    abc({bookname:'aa',author:'bb'})
+    abc('bookname=aa&author=bb')
+   </script>
+</body>
+</html>
