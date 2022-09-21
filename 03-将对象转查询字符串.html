@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let params = {
+            id:100,
+            appkey:'laotang'
+        }
+
+        //目标格式： id=100&appkey=laotang
+        let arr = []
+        for (const key in params) {
+            // key === id | appkey
+            // params[key] === 100 | laotang
+            // console.log(params[key]);//key是变量，只能用【】语法
+            arr.push(`${key} = ${params[key]}`)
+        }
+        console.log(arr.join('&'));
+
+    </script>
+</body>
+</html>
